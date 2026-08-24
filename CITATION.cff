@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use Orchestra, please cite it as below."
+title: "Orchestra: Open-source distribution operations platform for wholesalers and distributors"
+type: software
+version: "1.0.0"
+date-released: "2026-08-24"
+license: MIT
+repository-code: "https://github.com/nasimubd/orchestra"
+url: "https://github.com/nasimubd/orchestra"
+
+authors:
+  - family-names: "NASIM"
+    given-names: "MD"
+    affiliation: "ePATNER"
+
+keywords:
+  - distribution
+  - ERP
+  - inventory
+  - wholesale
+  - FMCG
+  - sales
+  - logistics
+  - business-management
+  - Laravel
+
+copyright:
+  - "2026 ePATNER"
