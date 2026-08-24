@@ -11,7 +11,6 @@ url: "https://github.com/nasimubd/orchestra"
 authors:
   - family-names: "NASIM"
     given-names: "MD"
-    affiliation: "ePATNER"
 
 keywords:
   - distribution
@@ -25,4 +24,4 @@ keywords:
   - Laravel
 
 copyright:
-  - "2026 ePATNER"
+  - "2026 MD NASIM"
