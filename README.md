@@ -4,6 +4,7 @@
 [![Laravel](https://img.shields.io/badge/Laravel-11-FF2D20.svg?logo=laravel&logoColor=white)](https://laravel.com)
 [![PHP](https://img.shields.io/badge/PHP-8.2%2B-777BB4.svg?logo=php&logoColor=white)](https://www.php.net)
 [![Version](https://img.shields.io/badge/version-1.1.1-blue.svg?logo=git&logoColor=white)](https://github.com/nasimubd/orchestra/releases)
+[![Conventional Commits](https://img.shields.io/badge/commits-conventional-fe5196.svg)](https://www.conventionalcommits.org/)
 
 **Open-source distribution operations platform for wholesalers, distributors, FMCG businesses, and multi-product enterprises.**
 
