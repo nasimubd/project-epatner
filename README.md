@@ -9,11 +9,9 @@
 
 Orchestra connects business administration, role-based access, product and catalog management, field-oriented staff operations, inventory transactions, batches, sales, returns, customer ledgers, collections, digital shopfront ordering, subscriptions, and operational reporting in one system.
 
-Developed and maintained by **ePATNER**, founded by **MD NASIM**.
+Developed and maintained by **MD NASIM**.
 
-🌐 **Website:** https://epatner.com
-👤 **Founder:** MD NASIM
-📧 **Email:** [md.nasim@epatner.com](mailto:md.nasim@epatner.com)
+👤 **Maintainer:** [MD NASIM](https://github.com/nasimubd)
 
 ---
 
@@ -593,13 +591,9 @@ For security vulnerabilities, please use a private disclosure process rather tha
 
 ## Maintainer
 
-**ePATNER**
+**MD NASIM**
 
-Orchestra is developed and maintained by ePATNER.
-
-**Founder & CEO:** MD NASIM
-**Website:** https://epatner.com
-**Email:** [md.nasim@epatner.com](mailto:md.nasim@epatner.com)
+Orchestra is developed and maintained by [MD NASIM](https://github.com/nasimubd).
 
 ---
 
@@ -607,7 +601,7 @@ Orchestra is developed and maintained by ePATNER.
 
 Orchestra is released under the MIT License.
 
-Copyright © 2026 **ePATNER**.
+Copyright © 2026 **MD NASIM**.
 
 See the [`LICENSE`](./LICENSE) file for the complete license text.
 
@@ -621,7 +615,6 @@ If you use Orchestra in research, academic work, technical documentation, or ano
 @software{orchestra,
   title = {Orchestra: Open-source distribution operations platform for wholesalers and distributors},
   author = {MD NASIM},
-  organization = {ePATNER},
   version = {1.0.0},
   year = {2026},
   url = {https://github.com/nasimubd/orchestra}
@@ -634,7 +627,6 @@ If you use Orchestra in research, academic work, technical documentation, or ano
 @software{orchestra,
   title = {Orchestra: Open-source distribution operations platform for wholesalers and distributors},
   author = {MD NASIM},
-  organization = {ePATNER},
   version = {1.0.0},
   year = {2026},
   url = {https://github.com/nasimubd/orchestra}
@@ -649,10 +641,7 @@ If you use Orchestra in research, academic work, technical documentation, or ano
 
 Distribution Operations Platform
 
-Developed and maintained by **ePATNER**.
+Developed and maintained by [MD NASIM](https://github.com/nasimubd).
 
-🌐 https://epatner.com
-📧 [md.nasim@epatner.com](mailto:md.nasim@epatner.com)
-
-Copyright © 2026 ePATNER.
+Copyright © 2026 MD NASIM.
 Licensed under the MIT License.
