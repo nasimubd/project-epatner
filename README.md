@@ -9,17 +9,13 @@
 
 Orchestra connects business administration, role-based access, product and catalog management, field-oriented staff operations, inventory transactions, batches, sales, returns, customer ledgers, collections, digital shopfront ordering, subscriptions, and operational reporting in one system.
 
-It is designed around a simple idea:
+Developed and maintained by **ePATNER**, founded by **MD NASIM**.
 
-```text
-people → products → transactions → inventory → money → customers
-                         │
-                         ▼
-                    operations
-                         │
-                         ▼
-                     Orchestra
-```
+🌐 **Website:** https://epatner.com
+👤 **Founder & CEO:** MD NASIM
+📧 **Email:** [md.nasim@epatner.com](mailto:md.nasim@epatner.com)
+
+---
 
 ## Why Orchestra
 
@@ -165,39 +161,7 @@ Orchestra brings those workflows together around a shared business and transacti
 * Collection information
 * Transaction status reporting
 
-## Role model
-
-Orchestra separates platform-level administration from business-level operations.
-
-```text
-Super Admin
-    │
-    ├── Businesses
-    ├── Business Administrators
-    ├── Common Products
-    ├── Common Categories
-    ├── Common Units
-    ├── Default Ledgers
-    ├── Location Data
-    ├── Roles
-    └── Permissions
-            │
-            ▼
-     Business Admin
-            │
-            ├── Staff
-            ├── Products
-            ├── Categories
-            ├── Inventory
-            ├── Transactions
-            ├── Ledgers
-            ├── Shopfront
-            ├── Orders
-            ├── Imports
-            └── Operations
-```
-
-Authorization is implemented through Laravel middleware and Spatie Laravel Permission.
+---
 
 ## Distribution data model
 
@@ -232,7 +196,45 @@ Business
              └── Order Lines
 ```
 
-The repository's migration history shows this model evolving around businesses, products, transactions, inventory, staff, returns, damage, deposits, shopfront orders, subscriptions, DSR assignments, and salary-head functionality.
+The repository's database design is centered around business entities, products, transactions, inventory, staff assignments, returns, customer ledgers, payments, deposits, shopfront orders, subscriptions, and data-quality workflows.
+
+---
+
+## Role model
+
+Orchestra separates platform-level administration from business-level operations.
+
+```text
+Super Admin
+    │
+    ├── Businesses
+    ├── Business Administrators
+    ├── Common Products
+    ├── Common Categories
+    ├── Common Units
+    ├── Default Ledgers
+    ├── Location Data
+    ├── Roles
+    └── Permissions
+            │
+            ▼
+     Business Admin
+            │
+            ├── Staff
+            ├── Products
+            ├── Categories
+            ├── Inventory
+            ├── Transactions
+            ├── Ledgers
+            ├── Shopfront
+            ├── Orders
+            ├── Imports
+            └── Operations
+```
+
+Authorization is implemented through Laravel middleware and Spatie Laravel Permission.
+
+---
 
 ## Data quality
 
@@ -250,7 +252,9 @@ Import
   └── Merge history
 ```
 
-Duplicate-detection functionality is implemented through dedicated service and model layers.
+Dedicated services and models are used for duplicate detection and customer data-quality workflows.
+
+---
 
 ## Shopfront workflow
 
@@ -277,7 +281,9 @@ Order
       Transaction
 ```
 
-This allows a business to expose its catalog and accept digital orders while keeping those orders connected to its internal transaction model.
+This allows a business to expose its product catalogue and accept digital orders while keeping those orders connected to its internal transaction model.
+
+---
 
 ## Technology
 
@@ -317,24 +323,24 @@ Orchestra is built on the Laravel ecosystem.
 * Mockery
 * Collision
 
-## Under the hood
+---
 
-Orchestra follows Laravel's conventional application architecture while separating administrative controllers, business controllers, domain models, services, imports, jobs, and database migrations.
+## Architecture
 
 ```text
 app/
+├── Console/
 ├── Http/
 │   └── Controllers/
 │       ├── Admin/
 │       ├── Auth/
 │       └── SuperAdmin/
-│
-├── Models/
-├── Services/
 ├── Imports/
 ├── Jobs/
+├── Models/
 ├── Notifications/
-└── Providers/
+├── Providers/
+└── Services/
 
 database/
 ├── factories/
@@ -354,7 +360,9 @@ tests/
 └── Unit/
 ```
 
-Current service-layer functionality includes customer-oriented services and duplicate-detection processing.
+The application follows Laravel's conventional architecture while separating administrative controllers, business controllers, domain models, services, imports, jobs, migrations, seeders, and frontend assets.
+
+---
 
 ## Installation
 
@@ -430,23 +438,19 @@ For frontend development:
 npm run dev
 ```
 
+---
+
 ## Development
 
-Orchestra includes a Composer development command that runs the Laravel server, queue listener, log viewer, and Vite development server together:
+Orchestra includes a Composer development command for running the main local development processes together:
 
 ```bash
 composer run dev
 ```
 
-The development workflow is equivalent to:
+This workflow brings together the Laravel development server, queue listener, application logs, and Vite development server.
 
-```text
-Laravel server
-      │
-      ├── Queue listener
-      ├── Pail logging
-      └── Vite
-```
+---
 
 ## Testing
 
@@ -470,6 +474,8 @@ tests/
 └── Unit/
 ```
 
+---
+
 ## Versioning
 
 Orchestra follows Semantic Versioning.
@@ -480,69 +486,51 @@ Current release:
 v1.0.0
 ```
 
-Release numbering follows:
+Version format:
 
 ```text
 MAJOR.MINOR.PATCH
 ```
 
+---
+
 ## Project status
 
-Orchestra v1.0.0 establishes the initial public distribution-platform baseline.
+**Orchestra v1.0.0** establishes the initial public distribution-platform baseline.
 
-The current release focuses on the core operational foundation:
+The current release provides the foundation for:
 
 * business administration
 * access control
-* products
+* product management
 * inventory
 * sales transactions
 * customer ledgers
+* payments
+* deposits
 * collections
-* returns and damage
-* shopfront ordering
+* returns
+* damaged goods
+* DSR-oriented staff management
+* digital shopfront ordering
 * subscriptions
-* imports and data quality
+* imports
+* duplicate detection
+* data-quality workflows
 * operational reporting
 
-Future development can build on this foundation with additional field operations, mobile workflows, advanced logistics, integrations, automation, and intelligence.
-
-## Contributing
-
-Contributions are welcome.
-
-When contributing:
-
-1. Create a focused branch.
-2. Keep changes scoped to the problem being solved.
-3. Add or update tests where appropriate.
-4. Run the test suite.
-5. Verify frontend assets build successfully.
-6. Explain the problem and implementation clearly in the pull request.
-
-## Security
-
-Do not commit:
-
-* production credentials
-* API keys
-* payment credentials
-* database passwords
-* private environment files
-* other secrets
-
-For vulnerabilities that could affect users or deployments, use a private disclosure process rather than publishing exploitable details in a public issue.
+---
 
 ## Roadmap
 
-The architecture is intended to provide a foundation for a broader distribution operating platform.
+The architecture provides a foundation for expanding Orchestra into a broader distribution operating platform.
 
 Potential future areas include:
 
 ```text
 Field Operations
       │
-      ├── DSR workflows
+      ├── Advanced DSR workflows
       ├── Route operations
       ├── Delivery workflows
       └── Collection workflows
@@ -558,8 +546,8 @@ Platform
       │
       ├── APIs
       ├── Integrations
-      ├── Mobile applications
-      └── Webhooks
+      ├── Webhooks
+      └── Mobile applications
 
 Intelligence
       │
@@ -569,8 +557,102 @@ Intelligence
       └── AI-assisted operations
 ```
 
-These are roadmap directions, not claims about functionality currently included in `v1.0.0`.
+These represent future development directions and are not claims about functionality included in the current release.
+
+---
+
+## Contributing
+
+Contributions are welcome.
+
+When contributing:
+
+1. Create a focused branch.
+2. Keep changes scoped to the problem being solved.
+3. Add or update tests where appropriate.
+4. Run the test suite.
+5. Verify frontend assets build successfully.
+6. Clearly explain the problem and implementation in the pull request.
+
+---
+
+## Security
+
+Please do not commit:
+
+* production credentials
+* API keys
+* payment credentials
+* database passwords
+* private environment files
+* other secrets
+
+For security vulnerabilities, please use a private disclosure process rather than publishing exploitable details in a public issue.
+
+---
+
+## Maintainer
+
+**ePATNER**
+
+Orchestra is developed and maintained by ePATNER.
+
+**Founder & CEO:** MD NASIM
+**Website:** https://epatner.com
+**Email:** [md.nasim@epatner.com](mailto:md.nasim@epatner.com)
+
+---
 
 ## License
 
-[MIT](./LICENSE) © 2026 ePATNER
+Orchestra is released under the MIT License.
+
+Copyright © 2026 **ePATNER**.
+
+See the [`LICENSE`](./LICENSE) file for the complete license text.
+
+---
+
+## Citation
+
+If you use Orchestra in research, academic work, technical documentation, or another software project, please cite the repository.
+
+```bibtex
+@software{orchestra,
+  title = {Orchestra: Open-source distribution operations platform for wholesalers and distributors},
+  author = {MD NASIM},
+  organization = {ePATNER},
+  version = {1.0.0},
+  year = {2026},
+  url = {https://github.com/nasimubd/orchestra}
+}
+```
+
+### BibTeX
+
+```bibtex
+@software{orchestra,
+  title = {Orchestra: Open-source distribution operations platform for wholesalers and distributors},
+  author = {MD NASIM},
+  organization = {ePATNER},
+  version = {1.0.0},
+  year = {2026},
+  url = {https://github.com/nasimubd/orchestra}
+}
+```
+
+---
+
+## Project
+
+**Orchestra**
+
+Distribution Operations Platform
+
+Developed and maintained by **ePATNER**.
+
+🌐 https://epatner.com
+📧 [md.nasim@epatner.com](mailto:md.nasim@epatner.com)
+
+Copyright © 2026 ePATNER.
+Licensed under the MIT License.
