@@ -12,7 +12,7 @@ Orchestra connects business administration, role-based access, product and catal
 Developed and maintained by **ePATNER**, founded by **MD NASIM**.
 
 🌐 **Website:** https://epatner.com
-👤 **Founder & CEO:** MD NASIM
+👤 **Founder:** MD NASIM
 📧 **Email:** [md.nasim@epatner.com](mailto:md.nasim@epatner.com)
 
 ---
