@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?logo=opensourceinitiative&logoColor=white)](./LICENSE)
 [![Laravel](https://img.shields.io/badge/Laravel-11-FF2D20.svg?logo=laravel&logoColor=white)](https://laravel.com)
 [![PHP](https://img.shields.io/badge/PHP-8.2%2B-777BB4.svg?logo=php&logoColor=white)](https://www.php.net)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?logo=git&logoColor=white)](https://github.com/nasimubd/orchestra/releases)
+[![Version](https://img.shields.io/badge/version-1.1.1-blue.svg?logo=git&logoColor=white)](https://github.com/nasimubd/orchestra/releases)
 
 **Open-source distribution operations platform for wholesalers, distributors, FMCG businesses, and multi-product enterprises.**
 
